@@ -15,7 +15,7 @@ public class SimpleTest {
     //http://www.seleniumhq.org/download/maven.jsp
     //https://code.google.com/p/selenium/wiki/GettingStarted
     System.setProperty("webdriver.chrome.driver", System.getProperty("driverpath"));
-    WebDriver driver = Browser.launch();
+    WebDriver driver = new ChromeDriver();
     driver.get("https://www.google.com");
     WebElement element = driver.findElement(By.name("q"));
     element.sendKeys("Cheese!");
