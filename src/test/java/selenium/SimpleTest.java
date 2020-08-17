@@ -29,11 +29,11 @@ public class SimpleTest {
     //https://code.google.com/p/selenium/wiki/GettingStarted
     WebDriverManager.chromedriver().setup();
     ChromeOptions options = new ChromeOptions();
-    options.addArguments("--no-sandbox");
+    //options.addArguments("--no-sandbox");
     options.addArguments("--headless"); 
     options.addArguments("--disable-gpu");
-    options.addArguments("--disable-dev-shm-usage");
-    options.addArguments("--remote-debugging-port=9222");
+    //options.addArguments("--disable-dev-shm-usage");
+    //options.addArguments("--remote-debugging-port=9222");
     System.setProperty("webdriver.chrome.driver", System.getProperty("driverpath"));
    // WebDriver driver = Browser.launch(options);
     WebDriver driver = new ChromeDriver(options);
