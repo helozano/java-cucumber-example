@@ -59,7 +59,7 @@
 			<scope>test</scope>
 		</dependency>
 	        <dependency>
-            		<groupId>io.github.bonigarcia.wdm</groupId>
+            		<groupId>io.github.bonigarcia</groupId>
             		<artifactId>webdrivermanager</artifactId>
             		<version>RELEASE</version>
 		        <scope>test</scope>
