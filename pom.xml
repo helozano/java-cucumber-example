@@ -62,7 +62,7 @@
             		<groupId>io.github.bonigarcia</groupId>
             		<artifactId>webdrivermanager</artifactId>
             		<version>RELEASE</version>
-<!--            <scope>test</scope> -->
+		        <scope>test</scope>
         	</dependency>		
 	</dependencies>
 
