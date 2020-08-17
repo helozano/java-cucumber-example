@@ -18,7 +18,7 @@ public class SimpleTest {
     chromeOptions.add_argument("--no-sandbox");
     chromeOptions.addArguments("--headless");
     System.setProperty("webdriver.chrome.driver", System.getProperty("driverpath"));
-    WebDriver driver = new ChromeDriver(chrome_options=chromeOptions);
+    WebDriver driver = new ChromeDriver(chromeOptions=chromeOptions);
     driver.get("https://www.google.com");
     WebElement element = driver.findElement(By.name("q"));
     element.sendKeys("Cheese!");
