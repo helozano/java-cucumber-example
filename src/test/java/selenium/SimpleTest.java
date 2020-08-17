@@ -33,7 +33,7 @@ public class SimpleTest {
     options.addArguments("--headless"); 
     options.addArguments("--disable-gpu");
     options.addArguments("--disable-dev-shm-usage");
-    options.addArguments("--remote-debugging-port=0");
+    options.addArguments("--remote-debugging-port=9222");
     System.setProperty("webdriver.chrome.driver", System.getProperty("driverpath"));
    // WebDriver driver = Browser.launch(options);
     WebDriver driver = new ChromeDriver(options);
