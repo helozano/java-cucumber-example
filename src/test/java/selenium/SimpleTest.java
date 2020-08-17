@@ -12,7 +12,7 @@ public class SimpleTest {
 
   @Test
   public void sometest() {
-    ChromeDriverManager.getInstance().setup();
+    //ChromeDriverManager.getInstance().setup();
     ChromeOptions chromeOptions = new ChromeOptions();
     chromeOptions.add_argument("--no-sandbox");
     chromeOptions.addArguments("--headless");
