@@ -32,7 +32,7 @@ public class SimpleTest {
     //options.addArguments("--no-sandbox");
     options.addArguments("--headless"); 
     options.addArguments("--disable-gpu");
-    //options.addArguments("--disable-dev-shm-usage");
+    options.addArguments("--disable-dev-shm-usage");
     //options.addArguments("--remote-debugging-port=9222");
     System.setProperty("webdriver.chrome.driver", System.getProperty("driverpath"));
    // WebDriver driver = Browser.launch(options);
