@@ -28,9 +28,11 @@ public class SimpleTest {
     //http://www.seleniumhq.org/download/maven.jsp
     //https://code.google.com/p/selenium/wiki/GettingStarted
     WebDriverManager.chromedriver().setup();
-    ChromeOptions options = new ChromeOptions();
+    ChromeOptions options = new ChromeOptions();}
+    options.addArguments("--no-sandbox");
     options.addArguments("--headless"); 
-    options.addArguments("--disable-gpu"); 
+    options.addArguments("--disable-gpu");
+    options.addArguments("--disable-dev-shm-usage");
     System.setProperty("webdriver.chrome.driver", System.getProperty("driverpath"));
    // WebDriver driver = Browser.launch(options);
     WebDriver driver = new ChromeDriver(options);
