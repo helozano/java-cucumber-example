@@ -14,8 +14,12 @@ public class SimpleTest {
   public void sometest() {
     //http://www.seleniumhq.org/download/maven.jsp
     //https://code.google.com/p/selenium/wiki/GettingStarted
+    WebDriverManager.chromedriver().setup();
+    ChromeOptions options = new ChromeOptions();
+    options.addArguments("--headless"); 
+    options.addArguments("--disable-gpu"); 
     System.setProperty("webdriver.chrome.driver", System.getProperty("driverpath"));
-    WebDriver driver = Browser.launch();
+    WebDriver driver = Browser.launch(options);
     driver.get("https://www.google.com");
     WebElement element = driver.findElement(By.name("q"));
     element.sendKeys("Cheese!");
