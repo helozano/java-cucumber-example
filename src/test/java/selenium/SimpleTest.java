@@ -15,10 +15,10 @@ public class SimpleTest {
   public void sometest() {
     //ChromeDriverManager.getInstance().setup();
     ChromeOptions chromeOptions = new ChromeOptions();
-    chromeOptions.add_argument("--no-sandbox");
+    chromeOptions.addArguments("--no-sandbox");
     chromeOptions.addArguments("--headless");
     System.setProperty("webdriver.chrome.driver", System.getProperty("driverpath"));
-    WebDriver driver = new ChromeDriver(chromeOptions=chromeOptions);
+    WebDriver driver = new ChromeDriver(ChromeOptions);
     driver.get("https://www.google.com");
     WebElement element = driver.findElement(By.name("q"));
     element.sendKeys("Cheese!");
