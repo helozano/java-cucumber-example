@@ -9,6 +9,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -27,8 +28,10 @@ import org.openqa.selenium.remote.RemoteWebDriver;
     //http://www.seleniumhq.org/download/maven.jsp
     //https://code.google.com/p/selenium/wiki/GettingStarted
     // WebDriver driver = Browser.launch(options);
+	  ChromeOptions chromeOpts = new ChromeOptions();
     DesiredCapabilities caps = new DesiredCapabilities();
-    System.setProperty("webdriver.chrome.driver", System.getProperty("driverpath"));
+    caps.setCapability(ChromeOptions.CAPABILITY,  chromeOpts);
+    //System.setProperty("webdriver.chrome.driver", System.getProperty("driverpath"));
     caps.setCapability("browserName", "googlechrome");
     caps.setCapability("browserVersion", "latest");
     String sauceUrl = "http://localhost:4444/wd/hub";
