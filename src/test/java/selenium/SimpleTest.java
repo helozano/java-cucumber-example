@@ -31,7 +31,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 	  ChromeOptions chromeOpts = new ChromeOptions();
     DesiredCapabilities caps = new DesiredCapabilities();
     caps.setCapability(ChromeOptions.CAPABILITY,  chromeOpts);
-    //System.setProperty("webdriver.chrome.driver", System.getProperty("driverpath"));
+    System.setProperty("webdriver.chrome.driver", System.getProperty("driverpath"));
     caps.setCapability("browserName", "googlechrome");
     caps.setCapability("browserVersion", "latest");
     String sauceUrl = "http://localhost:4444/wd/hub";
