@@ -2,26 +2,33 @@ package selenium;
 
  
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
-String browser = "chrome";
-public static String hubAddress = "http://localhost:4444/wd/hub
+
 
  public class SimpleTest {
+	
+	 public WebDriver driver;
+	 public String browser = "chrome";  
+	 public  String hubAddress = "http://localhost:4444/wd/hub";
+	 
   @Test
-  public void sometest() {
+  public void sometest() throws MalformedURLException {
+	  
+	  
     //http://www.seleniumhq.org/download/maven.jsp
     //https://code.google.com/p/selenium/wiki/GettingStarted
     // WebDriver driver = Browser.launch(options);
     DesiredCapabilities caps = new DesiredCapabilities();
-    caps.setCapability(ChromeOptions.CAPABILITY,  chromeOpts);
+    
     caps.setCapability("browserName", "googlechrome");
     caps.setCapability("browserVersion", "latest");
     String sauceUrl = "http://localhost:4444/wd/hub";
